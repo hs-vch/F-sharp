@@ -1,0 +1,22 @@
+
+#include <iostream>
+using namespace std;
+
+int encontrarMaximo(int arr[], int tamaño) {
+    int maximo = arr[0]; // Empezamos con el primer elemento
+
+    for (int i = 1; i < tamaño; i++) {
+        if (arr[i] > maximo) {
+            maximo = arr[i]; // Actualizamos si encontramos uno mayor
+        }
+    }
+
+    return maximo;
+}
+
+int main() {
+    int valores[] = {23, 45, 12, 67, 34, 89, 56};
+    int máximo = encontrarMaximo(valores, 7);
+    cout << "El valor máximo es: " << máximo << endl;
+    return 0;
+}
